@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OneHubCentre Legal Facilitator - PAN India CSC, GST, Aadhaar services. Bangalore: EC/CC, Khata, ITR Filing, GST Filing, Trademark, ISO, Company Registration. WhatsApp: 9986848223">
+    <title>OneHubCentre | Legal Facilitator | ITR, GST, Trademark, Property Docs</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Cashfree Payment SDK -->
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+                    colors: { 
+                        primary: { 50: '#eef2ff', 100: '#e0e7ff', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 900: '#312e81', 950: '#1e1b4b' }, 
+                        accent: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }, 
+                        csc: '#0066b3', 
+                        gsk: '#2e7d32', 
+                        ask: '#ff6f00', 
+                        kaveri: '#1565c0',
+                        trust: '#0f766e',
+                        cashfree: '#00baf2'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+        .text-gradient { background: linear-gradient(135deg, #3730a3 0%, #6366f1 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .service-card, .price-card { transition: all 0.3s ease; }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .trust-gradient { background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); }
+        .pan-india-gradient { background: linear-gradient(135deg, #3730a3 0%, #6366f1 100%); }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #3730a3, #6366f1); border-radius: 5px; }
+        .legal-content { max-height: 60vh; overflow-y: auto; }
+        .sticky-bottom { position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: white; border-top: 2px solid #e2e8f0; padding: 10px; display: none; }
+        @media (max-width: 768px) { .sticky-bottom { display: flex; } .pb-safe { padding-bottom: 80px; } }
+        .category-header { background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 100%); border-left: 4px solid #3730a3; }
+        .contact-card { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border: 1px solid #cbd5e1; }
+        .contact-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); }
+        .btn-primary { background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.4); }
+        .btn-whatsapp { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); transition: all 0.3s ease; }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(34, 197, 94, 0.4); }
+        .btn-pay { background: linear-gradient(135deg, #00baf2 0%, #0082c9 100%); transition: all 0.3s ease; }
+        .btn-pay:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(0, 186, 242, 0.4); }
+        .service-category { background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; }
+        .service-category:hover { border-color: #cbd5e1; }
+        .trending-card { background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border: 2px solid #86efac; position: relative; overflow: hidden; }
+        .trending-card::before { content: 'IN-DEMAND'; position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 0.6rem; font-weight: bold; padding: 2px 8px; border-bottom-left-radius: 8px; }
+        .process-step { position: relative; }
+        .process-step::after { content: ''; position: absolute; top: 50%; right: -50%; width: 100%; height: 2px; background: linear-gradient(90deg, #4f46e5, #10b981); transform: translateY(-50%); z-index: 0; }
+        .process-step:last-child::after { display: none; }
+        @media (max-width: 768px) { .process-step::after { top: 100%; right: 50%; width: 2px; height: 100%; transform: translateX(50%); background: linear-gradient(180deg, #4f46e5, #10b981); } }
+        .expert-card { background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border: 1px solid #e0f2fe; transition: all 0.3s ease; }
+        .expert-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: #7dd3fc; }
+        .info-badge { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); color: #1e40af; }
+        .trust-badge { background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%); color: #0f766e; }
+        .disclaimer-box { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-left: 4px solid #0f766e; }
+        .price-tag { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; border: 1px solid #f59e0b; }
+        .price-strike { text-decoration: line-through; color: #9ca3af; font-size: 0.85em; }
+        .payment-modal { backdrop-filter: blur(8px); }
+    </style>
+<base target="_blank">
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased pb-safe">
+
+    <!-- Payment Processing Modal -->
+    <div id="paymentModal" class="fixed inset-0 z-[100] hidden payment-modal bg-black/50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 transform transition-all scale-100">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-cashfree/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-credit-card text-cashfree text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Complete Payment</h3>
+                <p class="text-sm text-slate-500 mt-1">Secure payment powered by Cashfree</p>
+            </div>
+            
+            <div class="bg-slate-50 rounded-xl p-4 mb-6 border border-slate-200">
+                <div class="flex justify-between mb-2">
+                    <span class="text-slate-600">Service:</span>
+                    <span class="font-semibold text-slate-900" id="modalServiceName">-</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-slate-600">Base Amount:</span>
+                    <span class="font-semibold text-slate-900">₹<span id="modalBaseAmount">0</span></span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-slate-600">GST (18%):</span>
+                    <span class="font-semibold text-slate-900">₹<span id="modalGST">0</span></span>
+                </div>
+                <div class="border-t border-slate-300 pt-2 mt-2 flex justify-between">
+                    <span class="font-bold text-slate-900">Total:</span>
+                    <span class="font-bold text-cashfree text-xl">₹<span id="modalTotal">0</span></span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <button onclick="processPayment()" class="w-full btn-pay text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fas fa-lock"></i> Pay Securely
+                </button>
+                <button onclick="closePaymentModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 rounded-xl font-bold transition-colors">
+                    Cancel
+                </button>
+            </div>
+            
+            <div class="mt-4 flex items-center justify-center gap-2 text-xs text-slate-400">
+                <i class="fas fa-shield-alt"></i>
+                <span>SSL Secured | 256-bit Encryption</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Button -->
+    <div class="fixed bottom-24 right-4 z-40 md:bottom-8">
+        <button onclick="showCart()" class="bg-cashfree text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform relative">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center hidden">0</span>
+        </button>
+    </div>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="sticky-bottom shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <div class="flex justify-around items-center max-w-md mx-auto">
+            <a href="tel:+919986848223" class="flex flex-col items-center text-primary-700 font-bold text-xs">
+                <i class="fas fa-phone text-xl mb-1"></i> Call
+            </a>
+            <a href="https://wa.me/+919986848223" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 shadow-lg">
+                <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+            </a>
+            <a href="#search-section" class="flex flex-col items-center text-slate-600 font-bold text-xs">
+                <i class="fas fa-search text-xl mb-1"></i> Search
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-file-signature text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-2xl text-primary-950 block leading-tight">OneHubCentre</span>
+                        <span class="text-xs text-accent-600 font-bold uppercase tracking-wider">Legal Facilitator</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-6 text-sm font-semibold">
+                    <a href="#why-expert" class="text-slate-600 hover:text-primary-700 transition-colors">Why Us?</a>
+                    <a href="#in-demand" class="text-primary-700 font-bold border-b-2 border-primary-600">Services</a>
+                    <a href="#how-it-works" class="text-slate-600 hover:text-primary-700 transition-colors">Process</a>
+                    <a href="#property-docs" class="text-slate-600 hover:text-primary-700 transition-colors">Property</a>
+                    <a href="#police-verification" class="text-slate-600 hover:text-primary-700 transition-colors">Police Verify</a>
+                    <a href="#search-section" class="text-slate-600 hover:text-primary-700 transition-colors">Search</a>
+                    <a href="#legal" class="text-slate-600 hover:text-primary-700 transition-colors">Legal</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button onclick="showCart()" class="hidden md:flex items-center gap-2 bg-cashfree hover:bg-cashfree/90 text-white px-4 py-2 rounded-full font-bold shadow-lg transition-all">
+                        <i class="fas fa-cart-plus"></i>
+                        <span id="navCartTotal">₹0</span>
+                    </button>
+                    <a href="https://wa.me/+919986848223" target="_blank" class="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-bold shadow-lg transition-all">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>9986848223</span>
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm hidden">
+        <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300" id="mobileMenuPanel">
+            <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <span class="font-display font-bold text-xl text-primary-950">Menu</span>
+                <button onclick="toggleMobileMenu()" class="p-2 hover:bg-slate-200 rounded-lg"><i class="fas fa-times text-xl"></i></button>
+            </div>
+            <div class="p-6 flex flex-col gap-3 overflow-y-auto h-full pb-24">
+                <a href="#why-expert" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-star text-primary-600"></i> Why Choose Us?</a>
+                <a href="#in-demand" onclick="toggleMobileMenu()" class="text-lg font-semibold text-primary-700 p-3 bg-primary-50 rounded-xl flex items-center gap-3"><i class="fas fa-fire text-red-500"></i> All Services</a>
+                <a href="#how-it-works" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-tasks text-primary-600"></i> How It Works</a>
+                <a href="#property-docs" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-home text-primary-600"></i> Property Docs</a>
+                <a href="#police-verification" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-shield-alt text-primary-600"></i> Police Verification</a>
+                <a href="#search-section" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-search text-primary-600"></i> Search Services</a>
+                <a href="#legal" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-balance-scale text-primary-600"></i> Legal Info</a>
+                <div class="mt-4 pt-4 border-t border-slate-200">
+                    <a href="tel:+919986848223" class="flex items-center gap-3 text-lg font-bold text-primary-700 p-3"><i class="fas fa-phone"></i> 9986848223</a>
+                    <a href="mailto:support@onehubcentre.com" class="flex items-center gap-3 text-lg font-bold text-slate-600 p-3 mt-2"><i class="fas fa-envelope"></i> support@onehubcentre.com</a>
+                    <a href="https://wa.me/+919986848223" class="flex items-center gap-3 text-lg font-bold text-green-600 p-3 mt-2"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-3 mb-6 opacity-90">
+                <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200 text-xs font-bold">
+                    <i class="fas fa-shield-alt text-green-600"></i><span>SSL Secured</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200 text-xs font-bold" title="Services facilitated via CSC network as per guidelines">
+                    <i class="fas fa-check-circle text-blue-600"></i><span>Via CSC Network</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200 text-xs font-bold">
+                    <i class="fas fa-star text-amber-500"></i><span>4.9/5 Google Rated</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200 text-xs font-bold">
+                    <i class="fas fa-credit-card text-cashfree"></i><span>Online Payment</span>
+                </div>
+            </div>
+
+            <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-trust/10 text-trust px-4 py-2 rounded-full text-sm font-bold border border-trust/20 mb-6">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Private Legal Facilitation Services</span>
+                </div>
+
+                <h1 class="font-display text-5xl lg:text-6xl font-bold text-slate-900 mb-4 leading-tight">
+                    OneHubCentre <span class="text-gradient">Legal Facilitator</span>
+                </h1>
+                
+                <p class="text-xl text-slate-600 mb-6 max-w-2xl mx-auto">
+                    Your trusted partner for PAN India CSC & GST Services + Bangalore Property Documentation. All services facilitated privately through authorized networks.
+                </p>
+
+                <!-- Document Sharing Note -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-8 max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center gap-2 text-blue-800 font-semibold mb-2">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Share Documents & Pay Online</span>
+                    </div>
+                    <p class="text-blue-700 text-sm">Send documents securely via WhatsApp or Email. Pay securely online via Cashfree. No doorstep collection needed.</p>
+                    <div class="flex justify-center gap-4 mt-3 text-sm font-bold">
+                        <span class="flex items-center gap-1"><i class="fab fa-whatsapp text-green-600"></i> 9986848223</span>
+                        <span class="flex items-center gap-1"><i class="fas fa-envelope text-primary-600"></i> support@onehubcentre.com</span>
+                    </div>
+                </div>
+
+                <!-- Quick Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button onclick="initiatePayment('ITR Filing', 2999)" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
+                        <i class="fas fa-file-invoice-dollar"></i> ITR Filing ₹2,999
+                    </button>
+                    <button onclick="initiatePayment('GST Registration', 1499)" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
+                        <i class="fas fa-calculator"></i> GST Reg ₹1,499
+                    </button>
+                    <button onclick="initiatePayment('Police Verification', 1200)" class="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
+                        <i class="fas fa-shield-alt"></i> Police Verify ₹1,200
+                    </button>
+                    <button onclick="initiatePayment('EC Service', 2000)" class="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
+                        <i class="fas fa-home"></i> Property EC ₹2,000
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+                    <div class="bg-white p-4 rounded-xl shadow-lg border border-slate-100">
+                        <div class="text-3xl font-bold text-primary-700 counter" data-target="50000">0</div>
+                        <div class="text-xs text-slate-500 font-semibold mt-1">Services Delivered</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-lg border border-slate-100">
+                        <div class="text-3xl font-bold text-primary-700">98%</div>
+                        <div class="text-xs text-slate-500 font-semibold mt-1">Success Rate</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-lg border border-slate-100">
+                        <div class="text-3xl font-bold text-primary-700">10+</div>
+                        <div class="text-xs text-slate-500 font-semibold mt-1">Years Experience</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-lg border border-slate-100">
+                        <div class="text-3xl font-bold text-primary-700">2-7</div>
+                        <div class="text-xs text-slate-500 font-semibold mt-1">Days Delivery</div>
+                    </div>
+                </div>
+
+                <!-- Contact Info Cards -->
+                <div class="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-6">
+                    <a href="https://wa.me/+919986848223" target="_blank" class="contact-card p-4 rounded-xl flex items-center gap-3 text-left">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 flex-shrink-0">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 font-semibold uppercase">WhatsApp</div>
+                            <div class="font-bold text-slate-800">9986848223</div>
+                            <div class="text-xs text-green-600 font-semibold">Fastest Response</div>
+                        </div>
+                    </a>
+                    <a href="mailto:support@onehubcentre.com" class="contact-card p-4 rounded-xl flex items-center gap-3 text-left">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 flex-shrink-0">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 font-semibold uppercase">Email</div>
+                            <div class="font-bold text-slate-800 text-sm">support@onehubcentre.com</div>
+                            <div class="text-xs text-primary-600 font-semibold">Detailed Queries</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToServices()" class="btn-pay text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl">
+                        <i class="fas fa-credit-card"></i> Pay & Book Service
+                    </button>
+                    <a href="#search-section" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl">
+                        <i class="fas fa-search"></i> Browse Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CONSULT A LEGAL EXPERT SECTION -->
+    <section id="why-expert" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%230f766e%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-trust/10 text-trust px-4 py-2 rounded-full font-bold mb-4 border border-trust/20">
+                    <i class="fas fa-question-circle mr-2"></i>Why Choose Professional Help?
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Why Consult a Legal Expert?</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">At OneHubCentre, we go beyond property services to provide a complete ecosystem of legal and documentation support—making everyday compliance simple, fast, and reliable.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: All-in-One -->
+                <div class="expert-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">All-in-One Legal & Documentation Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">From property verification to legal drafting and advisory, we ensure every transaction and document is legally sound and risk-free.</p>
+                </div>
+
+                <!-- Card 2: Personal Documentation -->
+                <div class="expert-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Personal Documentation Made Easy</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">We assist with Aadhaar, PAN, Voter ID, and address proof documentation—ensuring accuracy and hassle-free processing.</p>
+                </div>
+
+                <!-- Card 3: Taxation -->
+                <div class="expert-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Taxation & Financial Compliance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Expert support for ITR filing, GST registration, and compliance—helping individuals and businesses stay tax-ready and penalty-free.</p>
+                </div>
+
+                <!-- Card 4: Business Setup -->
+                <div class="expert-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Business Setup & Registrations</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">End-to-end assistance for company registration, licenses, and documentation—making business setup smooth and compliant.</p>
+                </div>
+
+                <!-- Card 5: Government Services -->
+                <div class="expert-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Government & Verification Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">RTO assistance, police verification, and utility documentation handled seamlessly, saving you time and effort.</p>
+                </div>
+
+                <!-- Card 6: Private Facilitation Note -->
+                <div class="expert-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-trust/5 to-trust/10 border-trust/20" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-trust to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Private Facilitation Only</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">All our services are facilitation-based and private. We do not represent any government authority. We simplify your access to government services through authorized networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IN-DEMAND SERVICES SECTION -->
+    <section id="in-demand" class="py-16 bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-trust text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    <i class="fas fa-star"></i> ALL SERVICES ARE IN-DEMAND
+                </div>
+                <h2 class="font-display text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto">Professional handling guaranteed. Transparent pricing with secure online payment. Connect with us for customized quotes based on your specific requirements.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- ITR Filing -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                            <i class="fas fa-file-invoice-dollar text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹2,999</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">ITR Filing</h3>
+                    <p class="text-xs text-slate-600 mb-3">Income Tax Return filing for individuals & businesses. All ITR forms supported.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-green-700 bg-green-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 24-48 Hours
+                    </div>
+                    <button onclick="initiatePayment('ITR Filing', 2999)" class="block w-full btn-pay text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- GST Filing -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
+                            <i class="fas fa-calculator text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹499<span class="text-xs">/mo</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">GST Filing</h3>
+                    <p class="text-xs text-slate-600 mb-3">Monthly/Quarterly GST Returns (GSTR-1, 3B). Compliance guaranteed.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-green-700 bg-green-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-bolt"></i> Same Day
+                    </div>
+                    <button onclick="initiatePayment('GST Filing Monthly', 499)" class="block w-full btn-pay text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Affidavit -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl border-2 border-orange-300">
+                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">EXPRESS</div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600">
+                            <i class="fas fa-file-signature text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹399</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Affidavit</h3>
+                    <p class="text-xs text-slate-600 mb-3">All types of affidavits on stamp paper. Notarized & delivered fast.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-orange-700 bg-orange-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-rocket"></i> 24-48 Hours
+                    </div>
+                    <button onclick="initiatePayment('Affidavit Service', 399)" class="block w-full bg-orange-600 hover:bg-orange-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Trademark -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
+                            <i class="fas fa-trademark text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹3,499</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Trademark Registration</h3>
+                    <p class="text-xs text-slate-600 mb-3">Online TM filing, search, and prosecution. Protect your brand.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 2-3 Days
+                    </div>
+                    <button onclick="initiatePayment('Trademark Registration', 3499)" class="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- ISO Registration -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹2,499</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">ISO Registration</h3>
+                    <p class="text-xs text-slate-600 mb-3">ISO 9001, 14001, 27001 certification support. All types available.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-cyan-700 bg-cyan-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 5-7 Days
+                    </div>
+                    <button onclick="initiatePayment('ISO Registration', 2499)" class="block w-full bg-cyan-600 hover:bg-cyan-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- GST Registration -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
+                            <i class="fas fa-id-card text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹1,499</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">GST Registration</h3>
+                    <p class="text-xs text-slate-600 mb-3">New GSTIN registration for businesses. ARN within 24 hrs.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-bolt"></i> 24 Hours
+                    </div>
+                    <button onclick="initiatePayment('GST Registration', 1499)" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Company Registration -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600">
+                            <i class="fas fa-building text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹4,999</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Company Registration</h3>
+                    <p class="text-xs text-slate-600 mb-3">Pvt Ltd, LLP, OPC incorporation. Complete documentation support.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-indigo-700 bg-indigo-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 7-10 Days
+                    </div>
+                    <button onclick="initiatePayment('Company Registration', 4999)" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Import Export Code -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600">
+                            <i class="fas fa-ship text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹1,999</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Import Export Code</h3>
+                    <p class="text-xs text-slate-600 mb-3">IEC registration with DGFT. Lifetime validity. Digital copy.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-rose-700 bg-rose-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 2-3 Days
+                    </div>
+                    <button onclick="initiatePayment('Import Export Code', 1999)" class="block w-full bg-rose-600 hover:bg-rose-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- FSSAI Registration -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600">
+                            <i class="fas fa-utensils text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹1,499</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">FSSAI Registration</h3>
+                    <p class="text-xs text-slate-600 mb-3">Food license for restaurants, manufacturers, traders. Basic to Central.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-teal-700 bg-teal-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 3-5 Days
+                    </div>
+                    <button onclick="initiatePayment('FSSAI Registration', 1499)" class="block w-full bg-teal-600 hover:bg-teal-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Aadhaar Services -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600">
+                            <i class="fas fa-fingerprint text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹499</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Aadhaar Services</h3>
+                    <p class="text-xs text-slate-600 mb-3">New enrolment, updates, PVC card printing. Through authorized CSC network.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-orange-700 bg-orange-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> Varies
+                    </div>
+                    <button onclick="initiatePayment('Aadhaar Services', 499)" class="block w-full bg-orange-600 hover:bg-orange-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- PAN Card -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                            <i class="fas fa-id-badge text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹499</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">PAN Card Services</h3>
+                    <p class="text-xs text-slate-600 mb-3">New application, corrections, reprint. NSDL/UTIITSL authorized.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-clock"></i> 7-15 Days
+                    </div>
+                    <button onclick="initiatePayment('PAN Card Service', 499)" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- MSME Registration -->
+                <div class="trending-card rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600">
+                            <i class="fas fa-industry text-2xl"></i>
+                        </div>
+                        <div class="price-tag px-3 py-1 rounded-full text-sm font-bold">₹599</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">MSME / Udyam Registration</h3>
+                    <p class="text-xs text-slate-600 mb-3">Udyam registration for micro, small & medium enterprises.</p>
+                    <div class="flex items-center gap-2 mb-3 text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded w-fit">
+                        <i class="fas fa-bolt"></i> Same Day
+                    </div>
+                    <button onclick="initiatePayment('MSME Udyam Registration', 599)" class="block w-full bg-slate-600 hover:bg-slate-700 text-white text-center py-2.5 rounded-xl font-bold text-sm transition-colors">
+                        Pay & Book <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-primary-100 text-primary-800 px-4 py-2 rounded-full font-bold mb-4 border border-primary-200">
+                    <i class="fas fa-magic mr-2"></i>Simple Process
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">How It Works</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Get your legal work done in 5 simple steps. No office visits required. Share documents via WhatsApp or Email. Pay securely online.</p>
+            </div>
+
+            <div class="relative">
+                <div class="grid md:grid-cols-5 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="process-step text-center group" data-aos="fade-up" data-aos-delay="0">
+                        <div class="relative inline-block mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform border-4 border-white">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold border-2 border-white">1</div>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Initiate Query</h3>
+                        <p class="text-xs text-slate-600">Select service & pay securely online or WhatsApp us your requirement</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-step text-center group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative inline-block mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform border-4 border-white">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold border-2 border-white">2</div>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Expert Connect</h3>
+                        <p class="text-xs text-slate-600">Our representative calls you within 30 mins to discuss details</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-step text-center group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative inline-block mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform border-4 border-white">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold border-2 border-white">3</div>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Share Documents</h3>
+                        <p class="text-xs text-slate-600">Send documents via WhatsApp or Email. Secure & encrypted.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-step text-center group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative inline-block mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform border-4 border-white">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold border-2 border-white">4</div>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Processing</h3>
+                        <p class="text-xs text-slate-600">We process your application. Most done in 2-7 days, some instant</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="process-step text-center group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative inline-block mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform border-4 border-white">
+                                <i class="fas fa-smile-beam"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold border-2 border-white">5</div>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Delivery</h3>
+                        <p class="text-xs text-slate-600">Documents delivered via email/WhatsApp. Hard copies by courier if needed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Document Sharing Highlight -->
+            <div class="mt-12 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200 text-center">
+                <div class="flex items-center justify-center gap-3 mb-3">
+                    <i class="fab fa-whatsapp text-3xl text-green-600"></i>
+                    <i class="fas fa-envelope text-3xl text-primary-600"></i>
+                    <i class="fas fa-credit-card text-3xl text-cashfree"></i>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Documents Accepted via WhatsApp & Email | Pay Online Securely</h3>
+                <p class="text-slate-600 text-sm mb-4">No doorstep collection. Share clear scanned copies or high-quality photos (PDF/JPG preferred). Pay securely via Cashfree.</p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+                    <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                        <i class="fas fa-check text-green-500"></i> Quick Upload
+                    </span>
+                    <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                        <i class="fas fa-check text-green-500"></i> Secure Payment
+                    </span>
+                    <span class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                        <i class="fas fa-check text-green-500"></i> 24/7 Accepted
+                    </span>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-10">
+                <button onclick="scrollToServices()" class="inline-flex items-center gap-2 btn-pay text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105">
+                    <i class="fas fa-credit-card text-xl"></i> Pay & Start Your Process
+                </button>
+                <p class="text-xs text-slate-500 mt-3">Avg. response time: 15 minutes during business hours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTY DOCUMENTATION - BANGALORE ONLY -->
+    <section id="property-docs" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-kaveri/10 text-kaveri px-4 py-2 rounded-full font-bold mb-4 border border-kaveri/20">
+                    <i class="fas fa-map-marker-alt mr-2"></i>Bangalore Urban & Rural Only
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Property Documentation</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto mb-4">Fixed price services for Bangalore properties through Kaveri Online Services. Documents via WhatsApp only. Secure payment available.</p>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 inline-flex items-center gap-2 text-blue-800 text-sm font-bold max-w-2xl">
+                    <i class="fas fa-info-circle"></i>
+                    <span>All prices include facilitation charges. Government fees extra (if applicable).</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-2xl shadow-xl border-t-4 border-green-500 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
+                                <i class="fas fa-file-contract text-2xl"></i>
+                            </div>
+                            <div class="price-tag px-4 py-2 rounded-full text-lg font-bold">₹2,000</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Encumbrance Certificate</h3>
+                        <p class="text-sm text-slate-500 mb-4">Any Bangalore property</p>
+                        <ul class="text-sm text-slate-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Digital + Hard copy</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>2-7 days delivery</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Kaveri Online processing</li>
+                        </ul>
+                        <button onclick="initiatePayment('EC - Encumbrance Certificate', 2000)" class="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-xl font-bold">Pay ₹2,000 & Book</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl border-t-4 border-green-500 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
+                                <i class="fas fa-copy text-2xl"></i>
+                            </div>
+                            <div class="price-tag px-4 py-2 rounded-full text-lg font-bold">₹1,500</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Certified Copy (CC)</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sale Deed, Registration documents</p>
+                        <ul class="text-sm text-slate-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Government certified</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Registration documents</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>2-7 days delivery</li>
+                        </ul>
+                        <button onclick="initiatePayment('CC - Certified Copy', 1500)" class="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-xl font-bold">Pay ₹1,500 & Book</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl border-t-4 border-amber-500 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600">
+                                <i class="fas fa-home text-2xl"></i>
+                            </div>
+                            <div class="price-tag px-4 py-2 rounded-full text-lg font-bold">₹7,999</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Khata Services</h3>
+                        <p class="text-sm text-slate-500 mb-4">Transfer, Registration, Correction</p>
+                        <ul class="text-sm text-slate-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-amber-500 mr-2"></i>Khata Transfer (B Khata)</li>
+                            <li><i class="fas fa-check text-amber-500 mr-2"></i>New Registration (A Khata)</li>
+                            <li><i class="fas fa-check text-amber-500 mr-2"></i>Correction/Bifurcation</li>
+                        </ul>
+                        <button onclick="initiatePayment('Khata Services', 7999)" class="block w-full bg-amber-600 hover:bg-amber-700 text-white text-center py-3 rounded-xl font-bold">Pay ₹7,999 & Book</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Document Checklist -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-slate-200">
+                <h3 class="font-bold text-lg mb-4 flex items-center gap-2"><i class="fas fa-clipboard-list text-primary-600"></i> Required Documents (Send via WhatsApp)</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">For EC:</h4>
+                        <ul class="space-y-1 text-slate-600">
+                            <li>• Sale Deed Copy</li>
+                            <li>• Property Address with Survey No.</li>
+                            <li>• Owner Aadhaar</li>
+                            <li>• Previous EC (if available)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">For CC:</h4>
+                        <ul class="space-y-1 text-slate-600">
+                            <li>• Document Number & Year</li>
+                            <li>• Registration Details</li>
+                            <li>• Property Address</li>
+                            <li>• Applicant ID Proof</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">For Khata:</h4>
+                        <ul class="space-y-1 text-slate-600">
+                            <li>• Sale Deed</li>
+                            <li>• Tax Paid Receipt</li>
+                            <li>• EC (Latest)</li>
+                            <li>• ID Proof & Photos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLICE VERIFICATION SECTION - HIGHLIGHTED -->
+    <section id="police-verification" class="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+                    <i class="fas fa-shield-alt"></i> THIRD-PARTY VERIFICATION SERVICES
+                </div>
+                <h2 class="font-display text-4xl font-bold mb-4">Police Verification Services</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto">Professional third-party verification assistance for tenants, employees, and domestic help. <strong>Fixed Price: ₹1,200</strong></p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tenant Verification -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400">
+                            <i class="fas fa-home text-2xl"></i>
+                        </div>
+                        <div class="bg-white text-slate-900 px-4 py-2 rounded-full text-lg font-bold">₹1,200</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Tenant Verification</h3>
+                    <p class="text-slate-300 text-sm mb-4">Complete tenant background verification including police clearance facilitation. Essential for landlords in Bangalore.</p>
+                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Identity Verification</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Criminal Record Check</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Address Verification</li>
+                    </ul>
+                    <button onclick="initiatePayment('Tenant Verification', 1200)" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-xl font-bold transition-colors">
+                        Pay ₹1,200 & Book
+                    </button>
+                </div>
+
+                <!-- Employee Verification -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center text-green-400">
+                            <i class="fas fa-user-tie text-2xl"></i>
+                        </div>
+                        <div class="bg-white text-slate-900 px-4 py-2 rounded-full text-lg font-bold">₹1,200</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Employee Verification</h3>
+                    <p class="text-slate-300 text-sm mb-4">Pre-employment background checks and police verification for companies. Ensure safe hiring practices.</p>
+                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Employment History</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Criminal Background</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Reference Checks</li>
+                    </ul>
+                    <button onclick="initiatePayment('Employee Verification', 1200)" class="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-xl font-bold transition-colors">
+                        Pay ₹1,200 & Book
+                    </button>
+                </div>
+
+                <!-- Domestic Help Verification -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400">
+                            <i class="fas fa-hands-helping text-2xl"></i>
+                        </div>
+                        <div class="bg-white text-slate-900 px-4 py-2 rounded-full text-lg font-bold">₹1,200</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Domestic Help Verification</h3>
+                    <p class="text-slate-300 text-sm mb-4">Verification for maids, drivers, security guards, and other domestic staff. Safety first for your family.</p>
+                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Identity Check</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Previous Employment</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Police Clearance</li>
+                    </ul>
+                    <button onclick="initiatePayment('Domestic Help Verification', 1200)" class="block w-full bg-amber-600 hover:bg-amber-700 text-white text-center py-3 rounded-xl font-bold transition-colors">
+                        Pay ₹1,200 & Book
+                    </button>
+                </div>
+
+                <!-- PCC for Passport -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400">
+                            <i class="fas fa-passport text-2xl"></i>
+                        </div>
+                        <div class="bg-white text-slate-900 px-4 py-2 rounded-full text-lg font-bold">₹1,200</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">PCC for Passport/Visa</h3>
+                    <p class="text-slate-300 text-sm mb-4">Police Clearance Certificate facilitation for passport renewal, visa applications, and immigration.</p>
+                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>PCC Application</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Police Station Coordination</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Document Follow-up</li>
+                    </ul>
+                    <button onclick="initiatePayment('PCC for Passport Visa', 1200)" class="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-xl font-bold transition-colors">
+                        Pay ₹1,200 & Book
+                    </button>
+                </div>
+
+                <!-- Corporate Verification -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400">
+                            <i class="fas fa-building text-2xl"></i>
+                        </div>
+                        <div class="bg-white text-slate-900 px-4 py-2 rounded-full text-lg font-bold">₹1,200<span class="text-sm">/head</span></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Corporate Verification</h3>
+                    <p class="text-slate-300 text-sm mb-4">Bulk verification services for companies, societies, and organizations. Custom packages available.</p>
+                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Bulk Processing</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>API Integration</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Dedicated Support</li>
+                    </ul>
+                    <button onclick="initiatePayment('Corporate Verification', 1200)" class="block w-full bg-cyan-600 hover:bg-cyan-700 text-white text-center py-3 rounded-xl font-bold transition-colors">
+                        Pay ₹1,200 & Book
+                    </button>
+                </div>
+
+                <!-- Vehicle/Driver Verification -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center text-red-400">
+                            <i class="fas fa-car text-2xl"></i>
+                        </div>
+                        <div class="bg-white text-slate-900 px-4 py-2 rounded-full text-lg font-bold">₹1,200</div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Driver & Vehicle Verification</h3>
+                    <p class="text-slate-300 text-sm mb-4">Verification for cab drivers, personal drivers, and vehicle ownership checks.</p>
+                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>License Verification</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Vehicle Registration</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Background Check</li>
+                    </ul>
+                    <button onclick="initiatePayment('Driver Verification', 1200)" class="block w-full bg-red-600 hover:bg-red-700 text-white text-center py-3 rounded-xl font-bold transition-colors">
+                        Pay ₹1,200 & Book
+                    </button>
+                </div>
+            </div>
+
+            <!-- Important Note -->
+            <div class="mt-8 bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                <div class="flex items-start gap-3 justify-center">
+                    <i class="fas fa-info-circle text-amber-400 text-xl mt-0.5"></i>
+                    <div class="text-left">
+                        <p class="font-bold text-amber-400 mb-1">Important Notice</p>
+                        <p class="text-slate-300 text-sm">We are third-party facilitators and do not issue verification certificates ourselves. Final verification is conducted by Bangalore Police. We assist with application filing, document preparation, and follow-up coordination only.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-section" class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-6 text-slate-900">Search From Complete Service Catalog</h2>
+            <div class="relative">
+                <input type="text" id="serviceSearch" placeholder="Type service name (e.g., 'Khata', 'GST', 'E-Shram', 'PAN', 'Affidavit')..." 
+                       class="w-full p-4 pl-14 pr-4 rounded-full border-2 border-slate-200 focus:border-primary-500 outline-none shadow-lg text-lg" onkeyup="searchServices()">
+                <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 text-xl"></i>
+            </div>
+            <div id="searchResults" class="mt-4 max-h-96 overflow-y-auto hidden bg-white rounded-2xl shadow-xl border border-slate-200 divide-y divide-slate-100"></div>
+            
+            <div class="mt-6 flex flex-wrap justify-center gap-2 text-xs">
+                <span class="px-3 py-1 bg-slate-100 rounded-full text-slate-600">Popular: EC (₹2,000), CC (₹1,500), Khata (₹7,999)</span>
+                <span class="px-3 py-1 bg-slate-100 rounded-full text-slate-600">ITR Filing (₹2,999)</span>
+                <span class="px-3 py-1 bg-slate-100 rounded-full text-slate-600">GST Registration (₹1,499)</span>
+                <span class="px-3 py-1 bg-slate-100 rounded-full text-slate-600">Trademark (₹3,499)</span>
+                <span class="px-3 py-1 bg-slate-100 rounded-full text-slate-600">Police Verification (₹1,200)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAN INDIA SERVICES -->
+    <section id="pan-india" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-primary-100 text-primary-800 px-4 py-2 rounded-full font-bold mb-4 border border-primary-200">
+                    <i class="fas fa-globe mr-2"></i>Available Across India
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">PAN India Services</h2>
+                <p class="text-slate-600">Services delivered through CSC, GST Suvidha Kendra, Aadhaar Seva Kendra & Central Government Portals</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <!-- Aadhaar Services -->
+                <div class="service-category rounded-2xl p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600"><i class="fas fa-fingerprint"></i></div>
+                        Aadhaar Services (Ask/CSC)
+                        <span class="ml-auto price-tag px-3 py-1 rounded-full text-sm">₹499</span>
+                    </h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">New Aadhaar Enrolment</span>
+                            <button onclick="initiatePayment('Aadhaar New Enrolment', 499)" class="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay ₹499</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Demographic Update (Name/DOB/Address)</span>
+                            <button onclick="initiatePayment('Aadhaar Demographic Update', 499)" class="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay ₹499</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Biometric Update (Finger/Iris/Photo)</span>
+                            <button onclick="initiatePayment('Aadhaar Biometric Update', 499)" class="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay ₹499</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Mobile Number & Email Update</span>
+                            <button onclick="initiatePayment('Aadhaar Mobile Email Update', 499)" class="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay ₹499</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Aadhaar PVC Card / Reprint</span>
+                            <button onclick="initiatePayment('Aadhaar PVC Card', 499)" class="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay ₹499</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Central Government G2C -->
+                <div class="service-category rounded-2xl p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600"><i class="fas fa-landmark"></i></div>
+                        Central Government & Welfare (CSC)
+                    </h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">PAN Card Application / Correction <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹499</span></span>
+                            <button onclick="initiatePayment('PAN Card Service', 499)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Passport Application Assistance <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹799</span></span>
+                            <button onclick="initiatePayment('Passport Assistance', 799)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Voter ID (New / Correction) <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹499</span></span>
+                            <button onclick="initiatePayment('Voter ID Service', 499)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Jeevan Pramaan (Life Certificate) <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹299</span></span>
+                            <button onclick="initiatePayment('Jeevan Pramaan', 299)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">E-Shram Registration <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹299</span></span>
+                            <button onclick="initiatePayment('E-Shram Registration', 299)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Ayushman Bharat (PM-JAY) <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹399</span></span>
+                            <button onclick="initiatePayment('Ayushman Bharat', 399)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">PM Kisan Samman Nidhi <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹399</span></span>
+                            <button onclick="initiatePayment('PM Kisan', 399)" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GST & Taxation -->
+                <div class="service-category rounded-2xl p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600"><i class="fas fa-calculator"></i></div>
+                        GST, Taxation & Accounting (GSK)
+                    </h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg border border-green-200 font-bold">
+                            <span class="text-sm text-green-900">GST Registration</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹1,499</span>
+                                <button onclick="initiatePayment('GST Registration', 1499)" class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg border border-green-200 font-bold">
+                            <span class="text-sm text-green-900">GST Return Filing (Monthly)</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹499<span class="text-xs">/mo</span></span>
+                                <button onclick="initiatePayment('GST Filing Monthly', 499)" class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">GST Amendment / Cancellation <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹999</span></span>
+                            <button onclick="initiatePayment('GST Amendment', 999)" class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg border border-blue-200 font-bold">
+                            <span class="text-sm text-blue-900">Income Tax Return (ITR) Filing</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹2,999</span>
+                                <button onclick="initiatePayment('ITR Filing', 2999)" class="bg-blue-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">TAN Registration <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹599</span></span>
+                            <button onclick="initiatePayment('TAN Registration', 599)" class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Accounting & Book-Keeping <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹1,499<span class="text-xs">/mo</span></span></span>
+                            <button onclick="initiatePayment('Accounting Bookkeeping', 1499)" class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Registration -->
+                <div class="service-category rounded-2xl p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600"><i class="fas fa-building"></i></div>
+                        Business & Registration (GSK/CSC)
+                    </h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">MSME / Udyam Registration <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹599</span></span>
+                            <button onclick="initiatePayment('MSME Udyam Registration', 599)" class="bg-purple-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded-lg border border-purple-200 font-bold">
+                            <span class="text-sm text-purple-900">FSSAI Registration / License</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹1,499</span>
+                                <button onclick="initiatePayment('FSSAI Registration', 1499)" class="bg-purple-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg border border-slate-200">
+                            <span class="text-sm font-medium text-slate-700">Shop & Establishment Registration <span class="price-tag px-2 py-0.5 rounded text-xs ml-2">₹1,299</span></span>
+                            <button onclick="initiatePayment('Shop Establishment', 1299)" class="bg-purple-500 text-white px-3 py-1 rounded-lg text-sm font-bold">Pay</button>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-rose-50 rounded-lg border border-rose-200 font-bold">
+                            <span class="text-sm text-rose-900">Import Export Code (IEC)</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹1,999</span>
+                                <button onclick="initiatePayment('Import Export Code', 1999)" class="bg-rose-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-indigo-50 rounded-lg border border-indigo-200 font-bold">
+                            <span class="text-sm text-indigo-900">Company Registration Assistance</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹4,999</span>
+                                <button onclick="initiatePayment('Company Registration', 4999)" class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded-lg border border-purple-200 font-bold">
+                            <span class="text-sm text-purple-900">Trademark Application Support</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹3,499</span>
+                                <button onclick="initiatePayment('Trademark Registration', 3499)" class="bg-purple-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-cyan-50 rounded-lg border border-cyan-200 font-bold">
+                            <span class="text-sm text-cyan-900">ISO Certification Support</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-sm">₹2,499</span>
+                                <button onclick="initiatePayment('ISO Certification', 2499)" class="bg-cyan-600 text-white px-3 py-1 rounded-lg text-sm">Pay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Service Availability Disclaimer -->
+            <div class="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
+                <p class="text-blue-800 text-sm font-semibold flex items-center justify-center gap-2">
+                    <i class="fas fa-info-circle text-blue-600"></i>
+                    Service availability is subject to government portal access, eligibility, documentation, and regional applicability. Prices are facilitation charges only.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANGALORE / KARNATAKA SPECIFIC -->
+    <section id="bangalore-specific" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-kaveri/10 text-kaveri px-4 py-2 rounded-full font-bold mb-4 border border-kaveri/20">
+                    <i class="fas fa-map-pin mr-2"></i>Karnataka / Bangalore Only
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Karnataka State Services</h2>
+                <p class="text-slate-600">Exclusive services for Karnataka residents through Kaveri Online & BangaloreOne</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Kaveri Online -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-laptop text-blue-600"></i>
+                        Kaveri Online Services
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded hover:bg-blue-100 text-sm font-bold text-blue-900 border border-blue-200">
+                            <span>Encumbrance Certificate (EC)</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-xs">₹2,000</span>
+                                <button onclick="initiatePayment('EC - Encumbrance Certificate', 2000)" class="bg-blue-600 text-white px-3 py-1 rounded text-xs">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded hover:bg-blue-100 text-sm font-bold text-blue-900 border border-blue-200">
+                            <span>Certified Copy (CC)</span>
+                            <div class="flex items-center gap-2">
+                                <span class="price-tag px-2 py-1 rounded text-xs">₹1,500</span>
+                                <button onclick="initiatePayment('CC - Certified Copy', 1500)" class="bg-blue-600 text-white px-3 py-1 rounded text-xs">Pay</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-blue-50 text-sm text-slate-700 border border-slate-200">
+                            <span>Property Registration Appointment</span>
+                            <span class="price-tag px-2 py-0.5 rounded text-xs">₹999</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-blue-50 text-sm text-slate-700 border border-slate-200">
+                            <span>Marriage Registration Appointment</span>
+                            <span class="price-tag px-2 py-0.5 rounded text-xs">₹1,499</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BangaloreOne & Police -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-purple-600">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fas fa-building text-purple-600"></i>
+                            BangaloreOne Services
+                        </h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-purple-50 text-sm text-slate-700 border border-slate-200">
+                                <span>BBMP Property Tax Payment</span>
+                                <span class="price-tag px-2 py-0.5 rounded text-xs">₹199</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-purple-50 text-sm text-slate-700 border border-slate-200">
+                                <span>BESCOM Electricity Bill Payment</span>
+                                <span class="price-tag px-2 py-0.5 rounded text-xs">₹49</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-purple-50 text-sm text-slate-700 border border-slate-200">
+                                <span>Traffic Challan Payment</span>
+                                <span class="price-tag px-2 py-0.5 rounded text-xs">₹99</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-purple-50 text-sm text-slate-700 border border-slate-200">
+                                <span>Birth & Death Certificate</span>
+                                <span class="price-tag px-2 py-0.5 rounded text-xs">₹799</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Police Verification Assistance -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-slate-700">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-slate-700"></i>
+                            Police Verification Assistance
+                        </h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-slate-200 text-sm text-slate-700 border border-slate-200 font-semibold">
+                                <span>Tenant Verification</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="price-tag px-2 py-0.5 rounded text-xs">₹1,200</span>
+                                    <button onclick="initiatePayment('Tenant Verification', 1200)" class="bg-slate-600 text-white px-2 py-0.5 rounded text-xs">Pay</button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-slate-200 text-sm text-slate-700 border border-slate-200">
+                                <span>Domestic Help Verification</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="price-tag px-2 py-0.5 rounded text-xs">₹1,200</span>
+                                    <button onclick="initiatePayment('Domestic Help Verification', 1200)" class="bg-slate-600 text-white px-2 py-0.5 rounded text-xs">Pay</button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-slate-200 text-sm text-slate-700 border border-slate-200">
+                                <span>Job/Employment Verification</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="price-tag px-2 py-0.5 rounded text-xs">₹1,200</span>
+                                    <button onclick="initiatePayment('Employee Verification', 1200)" class="bg-slate-600 text-white px-2 py-0.5 rounded text-xs">Pay</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-3 italic">
+                            *We facilitate the application process. Final verification is conducted by Bangalore Police.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Card -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-primary-600">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-paper-plane text-primary-600"></i>
+                        Submit Documents
+                    </h3>
+                    <p class="text-slate-600 text-sm mb-4">Share your documents securely via WhatsApp or Email for processing. Pay online securely.</p>
+                    
+                    <div class="space-y-4">
+                        <a href="https://wa.me/+919986848223" target="_blank" class="block p-4 bg-green-50 rounded-xl border border-green-200 hover:bg-green-100 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900">WhatsApp</div>
+                                    <div class="text-green-700 font-semibold">9986848223</div>
+                                    <div class="text-xs text-slate-500">Fastest Response</div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:support@onehubcentre.com" class="block p-4 bg-primary-50 rounded-xl border border-primary-200 hover:bg-primary-100 transition-colors">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Email</div>
+                                    <div class="text-primary-700 font-semibold text-sm">support@onehubcentre.com</div>
+                                    <div class="text-xs text-slate-500">For detailed queries</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-amber-50 rounded-lg border border-amber-200">
+                        <p class="text-xs text-amber-800">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            Please send clear scanned copies or high-quality photos (PDF/JPG format preferred).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPROVED DISCLAIMER SECTION -->
+    <section class="py-12 bg-gradient-to-br from-slate-50 to-slate-100 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="disclaimer-box rounded-2xl p-8 shadow-sm">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-trust/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-info-circle text-trust text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Private Facilitation Service</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <strong>OneHubCentre</strong> is a private legal facilitation center. We are NOT a government organization, department, or agency. We assist citizens in navigating government portals and procedures through authorized networks like CSC, GST Suvidha Kendra, and Kaveri Online.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                <p class="font-semibold text-slate-800 mb-1"><i class="fas fa-check text-green-500 mr-2"></i>What We Do</p>
+                                <p class="text-slate-600 text-xs">Facilitate applications, provide documentation support, coordinate with authorities, save your time</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg border border-slate-200">
+                                <p class="font-semibold text-slate-800 mb-1"><i class="fas fa-times text-red-400 mr-2"></i>What We Don't</p>
+                                <p class="text-slate-600 text-xs">Issue government certificates, guarantee approvals, represent government authorities</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-500 text-xs mt-4 italic">
+                            Government fees (if any) are separate from our facilitation charges. Final decisions rest solely with government officials.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGAL SECTION -->
+    <section id="legal" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-center mb-12">Legal Information & Policies</h2>
+            
+            <div class="space-y-4">
+                <details class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden group">
+                    <summary class="p-6 cursor-pointer bg-trust/5 font-bold text-slate-900 flex justify-between items-center list-none border-b border-trust/10 hover:bg-trust/10 transition-colors">
+                        <span class="flex items-center gap-2"><i class="fas fa-handshake text-trust"></i> FULL DISCLAIMER & NATURE OF SERVICE</span>
+                        <i class="fas fa-chevron-down transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 text-sm text-slate-600 legal-content">
+                        <div class="bg-trust/5 border border-trust/20 rounded-lg p-4 mb-4">
+                            <p class="font-bold text-trust text-lg mb-2">PRIVATE FACILITATION SERVICE</p>
+                            <p class="text-slate-700">OneHubCentre is a private legal facilitation and service assistance center. We are NOT a government organization, department, or agency.</p>
+                        </div>
+
+                        <p class="mb-4 font-semibold text-slate-800">We facilitate services available through:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>Common Service Centre (CSC) Network</li>
+                            <li>GST Suvidha Kendra (GSK)</li>
+                            <li>Aadhaar Seva Kendra (ASK)</li>
+                            <li>Kaveri Online Services (Karnataka)</li>
+                            <li>BangaloreOne</li>
+                            <li>Other government and semi-government portals</li>
+                        </ul>
+
+                        <p class="mb-4"><strong>All applications, certificates, approvals, rejections, processing timelines, and outcomes are entirely controlled by the respective government authorities.</strong></p>
+                        
+                        <p class="mb-4 text-trust font-bold">OneHubCentre does not guarantee approval, issuance, or completion within any fixed timeframe. Final decisions rest solely with government officials.</p>
+
+                        <p class="mb-4">Our facilitation charges are independent service fees for assistance, documentation support, and convenience. These charges are separate from and additional to any government fees or statutory charges.</p>
+
+                        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-4">
+                            <p class="font-bold text-amber-800 mb-2">NO AFFILIATION DISCLAIMER</p>
+                            <p class="text-amber-800">OneHubCentre is a private service facilitation center and is not affiliated with UIDAI, GSTN, Government of India, Government of Karnataka, CSC SPV, or any department unless explicitly stated.</p>
+                        </div>
+
+                        <p class="mb-4 font-semibold">By using this website or availing services from OneHubCentre, you explicitly agree that:</p>
+                        <ol class="list-decimal pl-5 space-y-1 text-slate-700">
+                            <li>You understand we are a private facilitator</li>
+                            <li>We are not affiliated with or representing any government body</li>
+                            <li>Government fees are your responsibility (if applicable)</li>
+                            <li>Service charges are non-refundable once processing begins</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-900 flex justify-between items-center list-none hover:bg-slate-100">
+                        <span>TERMS & CONDITIONS</span>
+                        <i class="fas fa-chevron-down transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 text-sm text-slate-600 legal-content border-t border-slate-200">
+                        <p class="font-bold mb-2 text-slate-800">1. Nature of Services</p>
+                        <p class="mb-4">OneHubCentre provides facilitation, guidance, documentation support, and application assistance only. We act as intermediaries to help navigate government portals. We are not responsible for final decisions, rejections, or delays caused by government authorities.</p>
+                        
+                        <p class="font-bold mb-2 text-slate-800">2. Facilitation Charges</p>
+                        <p class="mb-4">Facilitation charges are clearly communicated before service initiation. These charges cover our service costs, expertise, and time. Charges may be higher than government-prescribed fees due to operational costs, expertise, and convenience provided.</p>
+                        
+                        <p class="font-bold mb-2 text-slate-800">3. User Responsibilities</p>
+                        <p class="mb-4">Customers must provide accurate, complete, and genuine information and documents. OneHubCentre is not liable for rejection or delays caused by incorrect, incomplete, or fraudulent submissions. Users are responsible for verifying their eligibility for specific government schemes.</p>
+                        
+                        <p class="font-bold mb-2 text-slate-800">4. Processing Time</p>
+                        <p class="mb-4">Timelines shown on the website are indicative estimates only. Delays due to government processing, portal downtime, additional verification requirements, or policy changes are beyond our control. We do not guarantee completion within specific timeframes.</p>
+                        
+                        <p class="font-bold mb-2 text-slate-800">5. Limitation of Liability</p>
+                        <p class="mb-4">OneHubCentre shall not be liable for: Application rejection by government authorities; Loss arising from incorrect user information; Government policy or fee changes; Technical failures of government portals; Loss of data due to circumstances beyond our control.</p>
+
+                        <p class="font-bold mb-2 text-slate-800">6. Governing Law</p>
+                        <p>These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka.</p>
+                    </div>
+                </details>
+
+                <details class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-900 flex justify-between items-center list-none hover:bg-slate-100">
+                        <span>PRIVACY POLICY & DATA PROTECTION</span>
+                        <i class="fas fa-chevron-down transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 text-sm text-slate-600 legal-content border-t border-slate-200">
+                        <p class="mb-4"><strong>Effective Date:</strong> January 2025</p>
+
+                        <p class="mb-4 font-bold text-slate-800">Information We Collect:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>Personal Identification: Name, address, date of birth, mobile number, email ID</li>
+                            <li>Government IDs: Aadhaar number (as permitted for specific services), PAN, Voter ID</li>
+                            <li>Property Documents: Sale deeds, tax receipts, survey numbers (for property services)</li>
+                            <li>Financial Information: Bank details (only when required for specific applications)</li>
+                            <li>Communication Records: WhatsApp chats and documents shared for service delivery</li>
+                        </ul>
+
+                        <p class="mb-4 font-bold text-slate-800">How We Use Your Information:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>To submit applications on government portals on your behalf</li>
+                            <li>To communicate with you regarding application status</li>
+                            <li>To verify document completeness and accuracy</li>
+                            <li>To comply with legal obligations (if required by authorities)</li>
+                        </ul>
+
+                        <p class="mb-4 font-bold text-slate-800">Data Security Measures:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>Documents received via WhatsApp are stored securely on encrypted devices</li>
+                            <li>Access is restricted to authorized personnel only</li>
+                            <li>We do not share your data with third parties except government portals as required</li>
+                            <li>Documents are deleted 30 days after service completion unless retention is required by law</li>
+                        </ul>
+
+                        <p class="mb-4 font-bold text-slate-800">WhatsApp Communication:</p>
+                        <p class="mb-4">By contacting us via WhatsApp (9986848223), you consent to receiving service updates, document requests, and status notifications through this platform. Media and documents shared via WhatsApp are subject to WhatsApp's privacy policy in addition to ours.</p>
+
+                        <p class="mb-4 font-bold text-slate-800">Your Rights:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>Request access to your personal data</li>
+                            <li>Request correction of inaccurate information</li>
+                            <li>Request deletion of data (subject to legal retention requirements)</li>
+                            <li>Withdraw consent (may affect service delivery)</li>
+                        </ul>
+
+                        <p class="text-slate-700">For privacy concerns, contact us at <strong>support@onehubcentre.com</strong></p>
+                    </div>
+                </details>
+
+                <details class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-900 flex justify-between items-center list-none hover:bg-slate-100">
+                        <span>REFUND & CANCELLATION POLICY</span>
+                        <i class="fas fa-chevron-down transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 text-sm text-slate-600 legal-content border-t border-slate-200">
+                        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-4">
+                            <p class="text-amber-800 font-bold mb-2">IMPORTANT NOTICE</p>
+                            <p class="text-amber-700">All services are facilitation services. <strong>Facilitation charges are strictly non-refundable</strong> once the service process has started or documents have been submitted to government portals.</p>
+                        </div>
+
+                        <p class="font-bold mb-2 text-slate-800">Refunds will NOT be provided for:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>Application rejection by government authorities</li>
+                            <li>Government processing delays exceeding estimated timelines</li>
+                            <li>Determination of ineligibility by authorities</li>
+                            <li>Incorrect or false information provided by the customer</li>
+                            <li>Changes in government rules or scheme discontinuation</li>
+                            <li>Customer change of mind after process initiation</li>
+                            <li>Technical issues with government portals</li>
+                        </ul>
+
+                        <p class="font-bold mb-2 text-slate-800">Cancellation Policy:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li>Cancellation requests must be made before submission on the government portal</li>
+                            <li>If application is not yet submitted to authorities, a partial refund (minus processing fee of ₹500 or 20%, whichever is higher) may be considered</li>
+                            <li>Once submitted to government portals, no refund will be issued regardless of outcome</li>
+                        </ul>
+
+                        <p class="font-bold mb-2 text-slate-800">Government Fees:</p>
+                        <p class="mb-4">Any government fees, statutory charges, or portal charges paid on your behalf are non-refundable as per government rules. We will provide proof of payment for such fees.</p>
+
+                        <p class="text-slate-700">Refund requests must be emailed to <strong>support@onehubcentre.com</strong> with service details and reason for cancellation. Decision on refunds is at the sole discretion of OneHubCentre management.</p>
+                    </div>
+                </details>
+
+                <details class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden group">
+                    <summary class="p-6 cursor-pointer font-bold text-slate-900 flex justify-between items-center list-none hover:bg-slate-100">
+                        <span>DOCUMENT SUBMISSION & DATA RETENTION POLICY</span>
+                        <i class="fas fa-chevron-down transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 text-sm text-slate-600 legal-content border-t border-slate-200 bg-amber-50">
+                        <p class="font-bold text-amber-800 mb-2"><i class="fas fa-info-circle mr-2"></i>WHATSAPP & EMAIL ONLY POLICY</p>
+                        <p class="mb-2">We do not collect documents on doorstep or in-person.</p>
+                        <p class="mb-2">All documents must be shared via:</p>
+                        <ul class="list-disc pl-5 mb-2 space-y-1">
+                            <li><strong>WhatsApp:</strong> 9986848223</li>
+                            <li><strong>Email:</strong> support@onehubcentre.com</li>
+                        </ul>
+                        <p class="mb-2">Send clear scanned copies or high-quality photos (PDF/JPG format preferred).</p>
+                        <p class="mb-4">Hard copies of final certificates are sent via courier/mail only after digital delivery.</p>
+
+                        <p class="font-bold text-slate-800 mb-2">Data Retention:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Documents retained only until service completion</li>
+                            <li>Automatic deletion 30 days after final delivery</li>
+                            <li>Backup removal within 60 days</li>
+                            <li>Legal compliance retention only where required by law</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <div class="bg-slate-800 rounded-2xl p-6 text-white text-center mt-6">
+                    <h3 class="font-bold mb-2">GOVERNING LAW & JURISDICTION</h3>
+                    <p class="text-slate-300 text-sm">All disputes subject to laws of India. Registered office: Bangalore, Karnataka. Jurisdiction: Courts of Karnataka.</p>
+                    <p class="text-slate-400 text-xs mt-2">Business Name: OneHubCentre | WhatsApp: 9986848223 | Email: support@onehubcentre.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-950 text-white pt-16 pb-24 md:pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-file-signature text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="font-display font-bold text-xl block">OneHubCentre</span>
+                            <span class="text-xs text-accent-400">Legal Facilitator</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">Private Legal Facilitation Center providing assistance for PAN India CSC & GST Services and Bangalore Property Documentation.</p>
+                    <div class="text-xs text-slate-500 bg-white/5 p-3 rounded-lg border border-white/10">
+                        <p class="mb-1"><strong>Business Name:</strong> OneHubCentre</p>
+                        <p class="mb-1"><strong>Location:</strong> Bangalore, Karnataka</p>
+                        <p class="mb-1"><strong>Est:</strong> 2014</p>
+                        <p class="mb-1"><strong>Working Hours:</strong> Mon-Sat, 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-accent-400">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#why-expert" class="hover:text-white">Why Choose Us</a></li>
+                        <li><a href="#in-demand" class="hover:text-white text-accent-300 font-semibold">All Services</a></li>
+                        <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+                        <li><a href="#property-docs" class="hover:text-white">Property Docs</a></li>
+                        <li><a href="#police-verification" class="hover:text-white">Police Verification</a></li>
+                        <li><a href="#legal" class="hover:text-white">Legal & Privacy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-accent-400">Popular Services</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex justify-between"><span>EC (Bangalore)</span> <span class="text-green-400 text-xs">₹2,000</span></li>
+                        <li class="flex justify-between"><span>CC (Bangalore)</span> <span class="text-green-400 text-xs">₹1,500</span></li>
+                        <li class="flex justify-between"><span>Police Verification</span> <span class="text-blue-400 text-xs">₹1,200</span></li>
+                        <li class="flex justify-between"><span>ITR Filing</span> <span class="text-blue-400 text-xs">₹2,999</span></li>
+                        <li class="flex justify-between"><span>GST Registration</span> <span class="text-blue-400 text-xs">₹1,499</span></li>
+                        <li class="flex justify-between"><span>Khata Services</span> <span class="text-amber-400 text-xs">₹7,999</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-accent-400">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fab fa-whatsapp text-green-500 text-lg"></i>
+                            <span class="text-white font-semibold">9986848223</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-primary-400"></i>
+                            <span>support@onehubcentre.com</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-0.5"></i>
+                            <span>Bangalore, Karnataka, India</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-xs text-trust bg-trust/10 p-2 rounded border border-trust/20">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Private Service - Not a Govt Office
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 space-y-4">
+                <!-- Affiliation Disclaimer in Footer -->
+                <div class="bg-white/5 border border-white/10 rounded-lg p-4 text-center mb-4">
+                    <p class="text-slate-300 text-xs font-semibold">
+                        <i class="fas fa-shield-alt mr-2 text-trust"></i>
+                        AFFILIATION DISCLAIMER: OneHubCentre is a private service facilitation center and is not affiliated with UIDAI, GSTN, Government of India, Government of Karnataka, CSC SPV, or any department unless explicitly stated.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 rounded-lg p-4 text-center">
+                    <p class="text-slate-300 text-sm font-semibold mb-2">LEGAL DISCLAIMER</p>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        OneHubCentre is a private legal facilitation service. We are NOT a government organization. We assist citizens in applying for services available on government portals such as CSC, GST Suvidha Kendra, Aadhaar Seva Kendra, Kaveri Online, etc. Government fees (if any) are separate. Our service charges are for facilitation and assistance only. Final approvals are subject to government discretion.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                    <p>&copy; 2014-2025 OneHubCentre. All rights reserved.</p>
+                    <div class="flex gap-4 mt-2 md:mt-0">
+                        <a href="#legal" class="hover:text-white">Terms</a>
+                        <a href="#legal" class="hover:text-white">Privacy</a>
+                        <a href="#legal" class="hover:text-white">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DISCLAIMER - BOTTOM -->
+    <div class="bg-slate-100 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="disclaimer-box rounded-xl p-4">
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-info-circle text-trust text-lg mt-0.5"></i>
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm mb-1">Private Facilitation Service</p>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            <strong>OneHubCentre is a private legal facilitation service.</strong> We are NOT a government organization. We assist citizens in applying for services available on government portals. Government fees (if any) are separate. Our service charges are for facilitation and assistance only.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ once: true, offset: 100, duration: 800 });
+
+        // Initialize Cashfree
+        // NOTE: In production, you should initialize with your specific mode
+        let cashfree;
+        try {
+            cashfree = Cashfree({
+                mode: "production" // or "sandbox" for testing
+            });
+        } catch (e) {
+            console.log("Cashfree SDK loaded but not initialized");
+        }
+
+        // Cart State
+        let cart = [];
+        
+        // Payment Modal State
+        let currentService = null;
+        let currentAmount = 0;
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const panel = document.getElementById('mobileMenuPanel');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    panel.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                panel.classList.add('translate-x-full');
+                setTimeout(() => menu.classList.add('hidden'), 300);
+            }
+        }
+
+        // Payment Functions
+        function initiatePayment(serviceName, amount) {
+            currentService = serviceName;
+            currentAmount = amount;
+            
+            // Calculate GST
+            const gst = Math.round(amount * 0.18);
+            const total = amount + gst;
+            
+            // Update Modal
+            document.getElementById('modalServiceName').textContent = serviceName;
+            document.getElementById('modalBaseAmount').textContent = amount.toLocaleString();
+            document.getElementById('modalGST').textContent = gst.toLocaleString();
+            document.getElementById('modalTotal').textContent = total.toLocaleString();
+            
+            // Show Modal
+            document.getElementById('paymentModal').classList.remove('hidden');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.add('hidden');
+            currentService = null;
+            currentAmount = 0;
+        }
+
+        async function processPayment() {
+            const gst = Math.round(currentAmount * 0.18);
+            const total = currentAmount + gst;
+            
+            // Show loading
+            const btn = document.querySelector('#paymentModal button[onclick="processPayment()"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            btn.disabled = true;
+            
+            try {
+                // IMPORTANT: In production, this API call should be made to YOUR BACKEND
+                // Your backend will then call Cashfree APIs using the Secret Key
+                // Never expose the Secret Key in frontend code
+                
+                // Simulated backend call structure:
+                /*
+                const response = await fetch('https://your-backend.com/api/create-order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        service: currentService,
+                        amount: total,
+                        customer_phone: '9999999999', // Get from user
+                        customer_email: 'customer@example.com' // Get from user
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.payment_session_id) {
+                    cashfree.checkout({
+                        paymentSessionId: data.payment_session_id,
+                        redirectTarget: "_self" // or "_blank" for new tab
+                    });
+                }
+                */
+                
+                // For demo purposes, showing the flow
+                alert(`In production, this will redirect to Cashfree Payment Page\n\nService: ${currentService}\nAmount: ₹${total}\n(Includes 18% GST)\n\nNote: You need to implement a backend API to create orders securely using your Secret Key.`);
+                
+                closePaymentModal();
+                
+            } catch (error) {
+                alert('Payment initialization failed. Please try again or contact support.');
+                console.error('Payment Error:', error);
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        // Cart Functions
+        function addToCart(serviceName, amount) {
+            cart.push({ service: serviceName, amount: amount, id: Date.now() });
+            updateCartUI();
+            
+            // Animation feedback
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Added';
+            btn.classList.add('bg-green-600');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-green-600');
+            }, 1500);
+        }
+
+        function updateCartUI() {
+            const count = cart.length;
+            const total = cart.reduce((sum, item) => sum + item.amount, 0);
+            
+            const cartCount = document.getElementById('cartCount');
+            const navCartTotal = document.getElementById('navCartTotal');
+            
+            if (count > 0) {
+                cartCount.textContent = count;
+                cartCount.classList.remove('hidden');
+                navCartTotal.textContent = `₹${total.toLocaleString()}`;
+            } else {
+                cartCount.classList.add('hidden');
+                navCartTotal.textContent = '₹0';
+            }
+        }
+
+        function showCart() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add services.');
+                return;
+            }
+            
+            let cartDetails = cart.map((item, idx) => 
+                `${idx + 1}. ${item.service} - ₹${item.amount.toLocaleString()}`
+            ).join('\n');
+            
+            const total = cart.reduce((sum, item) => sum + item.amount, 0);
+            const gst = Math.round(total * 0.18);
+            const grandTotal = total + gst;
+            
+            if (confirm(`Your Cart:\n\n${cartDetails}\n\nSubtotal: ₹${total.toLocaleString()}\nGST (18%): ₹${gst.toLocaleString()}\nGrand Total: ₹${grandTotal.toLocaleString()}\n\nProceed to checkout?`)) {
+                // Process cart payment
+                initiatePayment('Multiple Services', total);
+            }
+        }
+
+        function scrollToServices() {
+            document.getElementById('in-demand').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Search Functionality
+        const allServices = [
+            { name: "ITR Filing", price: 2999 },
+            { name: "GST Filing", price: 499 },
+            { name: "GST Registration", price: 1499 },
+            { name: "Affidavit", price: 399 },
+            { name: "Trademark Registration", price: 3499 },
+            { name: "ISO Registration", price: 2499 },
+            { name: "Company Registration", price: 4999 },
+            { name: "Import Export Code", price: 1999 },
+            { name: "FSSAI Registration", price: 1499 },
+            { name: "Encumbrance Certificate (EC)", price: 2000 },
+            { name: "Certified Copy (CC)", price: 1500 },
+            { name: "Khata Transfer", price: 7999 },
+            { name: "Khata Registration", price: 7999 },
+            { name: "Khata Correction", price: 7999 },
+            { name: "New Aadhaar Enrolment", price: 499 },
+            { name: "Aadhaar Update", price: 499 },
+            { name: "PAN Card Application", price: 499 },
+            { name: "Police Verification", price: 1200 },
+            { name: "Tenant Verification", price: 1200 },
+            { name: "Employee Verification", price: 1200 },
+            { name: "MSME/Udyam Registration", price: 599 },
+            { name: "Passport Assistance", price: 799 },
+            { name: "Voter ID", price: 499 },
+            { name: "E-Shram Registration", price: 299 }
+        ];
+
+        function searchServices() {
+            const input = document.getElementById('serviceSearch').value.toLowerCase();
+            const resultsDiv = document.getElementById('searchResults');
+            
+            if (input.length < 2) {
+                resultsDiv.classList.add('hidden');
+                return;
+            }
+
+            const filtered = allServices.filter(service => service.name.toLowerCase().includes(input));
+            
+            if (filtered.length > 0) {
+                resultsDiv.innerHTML = filtered.map(service => `
+                    <div class="flex justify-between items-center p-4 hover:bg-slate-50 border-b border-slate-100 last:border-0">
+                        <div>
+                            <span class="font-semibold text-slate-700 block">${service.name}</span>
+                            <span class="text-cashfree font-bold">₹${service.price.toLocaleString()}</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="initiatePayment('${service.name}', ${service.price})" class="bg-cashfree text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-cashfree/90">
+                                Pay Now
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                resultsDiv.classList.remove('hidden');
+            } else {
+                resultsDiv.innerHTML = `
+                    <div class="p-4 text-center">
+                        <p class="text-slate-500 mb-2">Service not found in quick list.</p>
+                        <a href="https://wa.me/+919986848223" target="_blank" class="text-green-600 font-bold">Contact us on WhatsApp for custom requirements</a>
+                    </div>
+                `;
+                resultsDiv.classList.remove('hidden');
+            }
+        }
+
+        // Close search when clicking outside
+        document.addEventListener('click', function(e) {
+            const searchContainer = document.getElementById('search-section');
+            if (!searchContainer.contains(e.target)) {
+                document.getElementById('searchResults').classList.add('hidden');
+            }
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.dataset.target);
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.innerText = target.toLocaleString() + (counter.dataset.suffix || '');
+                            clearInterval(timer);
+                        } else {
+                            counter.innerText = Math.floor(current).toLocaleString();
+                        }
+                    }, 30);
+                    observer.unobserve(counter);
+                }
+            });
+        }, observerOptions);
+        counters.forEach(counter => observer.observe(counter));
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) navbar.classList.add('shadow-md');
+            else navbar.classList.remove('shadow-md');
+        });
+
+        // Close modal on outside click
+        document.getElementById('paymentModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePaymentModal();
+            }
+        });
+    </script>
+</body>
+</html>
