@@ -72,6 +72,57 @@
         .price-tag { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; border: 1px solid #f59e0b; }
         .price-strike { text-decoration: line-through; color: #9ca3af; font-size: 0.85em; }
         .payment-modal { backdrop-filter: blur(8px); }
+        
+        /* Form Styles */
+        .form-input { 
+            transition: all 0.3s ease; 
+            border: 2px solid #e2e8f0; 
+        }
+        .form-input:focus { 
+            border-color: #4f46e5; 
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); 
+            outline: none; 
+        }
+        .form-label { 
+            font-weight: 600; 
+            color: #374151; 
+            margin-bottom: 0.5rem; 
+            display: block; 
+            font-size: 0.875rem; 
+        }
+        .form-group { margin-bottom: 1.25rem; }
+        .radio-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .radio-option { 
+            flex: 1; 
+            min-width: 100px; 
+            position: relative; 
+        }
+        .radio-option input[type="radio"] { 
+            position: absolute; 
+            opacity: 0; 
+            cursor: pointer; 
+        }
+        .radio-label { 
+            display: block; 
+            padding: 0.75rem 1rem; 
+            background: #f1f5f9; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 0.75rem; 
+            text-align: center; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            font-weight: 500; 
+            font-size: 0.875rem;
+        }
+        .radio-option input[type="radio"]:checked + .radio-label { 
+            background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); 
+            color: white; 
+            border-color: #4f46e5; 
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2); 
+        }
+        .radio-option:hover .radio-label { 
+            border-color: #4f46e5; 
+        }
     </style>
 <base target="_blank">
 </head>
@@ -123,6 +174,24 @@
         </div>
     </div>
 
+    <!-- Enquiry Success Modal -->
+    <div id="enquiryModal" class="fixed inset-0 z-[100] hidden payment-modal bg-black/50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 transform transition-all scale-100 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check-circle text-green-600 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
+            <p class="text-slate-600 mb-4">Your enquiry has been submitted successfully. Our compliance experts will contact you shortly.</p>
+            <div class="bg-slate-50 rounded-lg p-4 mb-4 border border-slate-200">
+                <p class="text-sm text-slate-500 mb-1">Expected Response Time</p>
+                <p class="text-lg font-bold text-primary-700">Within 30 Minutes</p>
+            </div>
+            <button onclick="closeEnquiryModal()" class="w-full btn-primary text-white py-3 rounded-xl font-bold">
+                Done
+            </button>
+        </div>
+    </div>
+
     <!-- Cart Button -->
     <div class="fixed bottom-24 right-4 z-40 md:bottom-8">
         <button onclick="showCart()" class="bg-cashfree text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform relative">
@@ -164,6 +233,7 @@
                     <a href="#why-expert" class="text-slate-600 hover:text-primary-700 transition-colors">Why Us?</a>
                     <a href="#in-demand" class="text-primary-700 font-bold border-b-2 border-primary-600">Services</a>
                     <a href="#how-it-works" class="text-slate-600 hover:text-primary-700 transition-colors">Process</a>
+                    <a href="#enquiry-form" class="text-slate-600 hover:text-primary-700 transition-colors">Enquiry</a>
                     <a href="#property-docs" class="text-slate-600 hover:text-primary-700 transition-colors">Property</a>
                     <a href="#police-verification" class="text-slate-600 hover:text-primary-700 transition-colors">Police Verify</a>
                     <a href="#search-section" class="text-slate-600 hover:text-primary-700 transition-colors">Search</a>
@@ -198,6 +268,7 @@
                 <a href="#why-expert" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-star text-primary-600"></i> Why Choose Us?</a>
                 <a href="#in-demand" onclick="toggleMobileMenu()" class="text-lg font-semibold text-primary-700 p-3 bg-primary-50 rounded-xl flex items-center gap-3"><i class="fas fa-fire text-red-500"></i> All Services</a>
                 <a href="#how-it-works" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-tasks text-primary-600"></i> How It Works</a>
+                <a href="#enquiry-form" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-edit text-primary-600"></i> Enquiry Form</a>
                 <a href="#property-docs" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-home text-primary-600"></i> Property Docs</a>
                 <a href="#police-verification" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-shield-alt text-primary-600"></i> Police Verification</a>
                 <a href="#search-section" onclick="toggleMobileMenu()" class="text-lg font-semibold text-slate-700 p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3"><i class="fas fa-search text-primary-600"></i> Search Services</a>
@@ -321,8 +392,8 @@
                     <button onclick="scrollToServices()" class="btn-pay text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl">
                         <i class="fas fa-credit-card"></i> Pay & Book Service
                     </button>
-                    <a href="#search-section" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl">
-                        <i class="fas fa-search"></i> Browse Services
+                    <a href="#enquiry-form" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl">
+                        <i class="fas fa-edit"></i> Send Enquiry
                     </a>
                 </div>
             </div>
@@ -737,6 +808,171 @@
                     <i class="fas fa-credit-card text-xl"></i> Pay & Start Your Process
                 </button>
                 <p class="text-xs text-slate-500 mt-3">Avg. response time: 15 minutes during business hours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENQUIRY FORM SECTION -->
+    <section id="enquiry-form" class="py-20 bg-gradient-to-br from-slate-50 via-white to-primary-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%234f46e5%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-800 px-4 py-2 rounded-full text-sm font-bold mb-4 border border-primary-200">
+                    <i class="fas fa-headset"></i> Get Expert Assistance
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Our experts will help you with compliance</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+                    Please take 30 seconds to provide your details. This helps our compliance officers prepare the necessary documents before we hop on a call with you.
+                </p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-r from-primary-600 to-primary-700 p-6 text-white">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-clipboard-list text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Quick Enquiry Form</h3>
+                            <p class="text-primary-100 text-sm">Fill details below | Response within 30 mins</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="leadEnquiryForm" class="p-8 md:p-10" onsubmit="handleEnquirySubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label class="form-label flex items-center gap-2">
+                                <i class="fas fa-user text-primary-600 text-sm"></i> Full Name <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="enqName" required placeholder="Enter your full name" 
+                                   class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 text-slate-800 placeholder-slate-400">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label class="form-label flex items-center gap-2">
+                                <i class="fas fa-envelope text-primary-600 text-sm"></i> Email ID <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" id="enqEmail" required placeholder="your@email.com" 
+                                   class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 text-slate-800 placeholder-slate-400">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label class="form-label flex items-center gap-2">
+                                <i class="fas fa-phone text-primary-600 text-sm"></i> Phone Number <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" id="enqPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" 
+                                   class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 text-slate-800 placeholder-slate-400">
+                        </div>
+
+                        <!-- City -->
+                        <div class="form-group">
+                            <label class="form-label flex items-center gap-2">
+                                <i class="fas fa-map-marker-alt text-primary-600 text-sm"></i> Which city from? <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="enqCity" required placeholder="e.g., Bangalore, Mumbai, Delhi" 
+                                   class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 text-slate-800 placeholder-slate-400">
+                        </div>
+                    </div>
+
+                    <!-- Service Required -->
+                    <div class="form-group mt-6">
+                        <label class="form-label flex items-center gap-2">
+                            <i class="fas fa-briefcase text-primary-600 text-sm"></i> Which service required? <span class="text-red-500">*</span>
+                        </label>
+                        <select id="enqService" required class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 text-slate-800 cursor-pointer">
+                            <option value="" disabled selected>Select a service...</option>
+                            <option value="ITR Filing">ITR Filing (Income Tax Return)</option>
+                            <option value="GST Registration">GST Registration</option>
+                            <option value="GST Filing">GST Filing (Monthly/Quarterly)</option>
+                            <option value="Company Registration">Company Registration (Pvt Ltd/LLP)</option>
+                            <option value="Trademark Registration">Trademark Registration</option>
+                            <option value="Property EC/CC">Property EC/CC (Bangalore Only)</option>
+                            <option value="Khata Services">Khata Transfer/Registration</option>
+                            <option value="Police Verification">Police Verification</option>
+                            <option value="Aadhaar Services">Aadhaar Services (Update/PVC)</option>
+                            <option value="PAN Card">PAN Card (New/Correction)</option>
+                            <option value="MSME Registration">MSME/Udyam Registration</option>
+                            <option value="FSSAI License">FSSAI Registration/License</option>
+                            <option value="ISO Certification">ISO Certification</option>
+                            <option value="Import Export Code">Import Export Code (IEC)</option>
+                            <option value="Other">Other Service (Please describe)</option>
+                        </select>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="form-group mt-6">
+                        <label class="form-label flex items-center gap-2">
+                            <i class="fas fa-edit text-primary-600 text-sm"></i> Describe your requirement <span class="text-slate-400 font-normal text-xs">(Optional)</span>
+                        </label>
+                        <textarea id="enqDescription" rows="3" placeholder="Briefly describe what you need help with... This helps us prepare better for the call." 
+                                  class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 text-slate-800 placeholder-slate-400 resize-none"></textarea>
+                    </div>
+
+                    <!-- Preferred Time -->
+                    <div class="form-group mt-6">
+                        <label class="form-label flex items-center gap-2 mb-3">
+                            <i class="fas fa-clock text-primary-600 text-sm"></i> Preferred time to connect? <span class="text-red-500">*</span>
+                        </label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="timeMorning" name="preferredTime" value="Morning (9AM-12PM)" required>
+                                <label for="timeMorning" class="radio-label">
+                                    <i class="fas fa-sun text-amber-500 mb-1 block text-lg"></i>
+                                    Morning<br><span class="text-xs opacity-75">9AM - 12PM</span>
+                                </label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="timeAfternoon" name="preferredTime" value="Afternoon (12PM-4PM)">
+                                <label for="timeAfternoon" class="radio-label">
+                                    <i class="fas fa-cloud-sun text-orange-500 mb-1 block text-lg"></i>
+                                    Afternoon<br><span class="text-xs opacity-75">12PM - 4PM</span>
+                                </label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="timeEvening" name="preferredTime" value="Evening (4PM-7PM)">
+                                <label for="timeEvening" class="radio-label">
+                                    <i class="fas fa-moon text-indigo-500 mb-1 block text-lg"></i>
+                                    Evening<br><span class="text-xs opacity-75">4PM - 7PM</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mt-8">
+                        <button type="submit" id="submitEnquiryBtn" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-3 hover:scale-[1.02] transition-transform">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Submit Enquiry</span>
+                            <i class="fas fa-arrow-right opacity-75"></i>
+                        </button>
+                        <p class="text-center text-xs text-slate-500 mt-3 flex items-center justify-center gap-1">
+                            <i class="fas fa-lock text-green-500"></i>
+                            Your information is secure and will never be shared with third parties
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Alternative Contact -->
+            <div class="mt-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-slate-600 mb-4">Need urgent assistance?</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/+919986848223" target="_blank" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold shadow-lg transition-all">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        WhatsApp Us Now
+                    </a>
+                    <a href="tel:+919986848223" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full font-bold shadow-lg transition-all">
+                        <i class="fas fa-phone"></i>
+                        Call 9986848223
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1234,14 +1470,14 @@
                             <span>Encumbrance Certificate (EC)</span>
                             <div class="flex items-center gap-2">
                                 <span class="price-tag px-2 py-1 rounded text-xs">₹2,000</span>
-                                <button onclick="initiatePayment('EC - Encumbrance Certificate', 2000)" class="bg-blue-600 text-white px-3 py-1 rounded text-xs">Pay</button>
+                                <button onclick="initiatePayment('EC - Encumbrance Certificate', 2000)" class="bg-blue-600 text-white px-2 py-1 rounded text-xs">Pay</button>
                             </div>
                         </div>
                         <div class="flex justify-between items-center p-3 bg-blue-50 rounded hover:bg-blue-100 text-sm font-bold text-blue-900 border border-blue-200">
                             <span>Certified Copy (CC)</span>
                             <div class="flex items-center gap-2">
                                 <span class="price-tag px-2 py-1 rounded text-xs">₹1,500</span>
-                                <button onclick="initiatePayment('CC - Certified Copy', 1500)" class="bg-blue-600 text-white px-3 py-1 rounded text-xs">Pay</button>
+                                <button onclick="initiatePayment('CC - Certified Copy', 1500)" class="bg-blue-600 text-white px-2 py-1 rounded text-xs">Pay</button>
                             </div>
                         </div>
                         <div class="flex justify-between items-center p-2 bg-slate-50 rounded hover:bg-blue-50 text-sm text-slate-700 border border-slate-200">
@@ -1619,6 +1855,7 @@
                         <li><a href="#why-expert" class="hover:text-white">Why Choose Us</a></li>
                         <li><a href="#in-demand" class="hover:text-white text-accent-300 font-semibold">All Services</a></li>
                         <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+                        <li><a href="#enquiry-form" class="hover:text-white">Enquiry Form</a></li>
                         <li><a href="#property-docs" class="hover:text-white">Property Docs</a></li>
                         <li><a href="#police-verification" class="hover:text-white">Police Verification</a></li>
                         <li><a href="#legal" class="hover:text-white">Legal & Privacy</a></li>
@@ -1768,6 +2005,59 @@
             currentAmount = 0;
         }
 
+        // Enquiry Form Functions
+        function handleEnquirySubmit(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitEnquiryBtn');
+            const originalContent = btn.innerHTML;
+            
+            // Get form values
+            const name = document.getElementById('enqName').value;
+            const email = document.getElementById('enqEmail').value;
+            const phone = document.getElementById('enqPhone').value;
+            const city = document.getElementById('enqCity').value;
+            const service = document.getElementById('enqService').value;
+            const description = document.getElementById('enqDescription').value;
+            const preferredTime = document.querySelector('input[name="preferredTime"]:checked')?.value || 'Not specified';
+            
+            // Show loading
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            btn.disabled = true;
+            
+            // Simulate processing (In production, send to your backend)
+            setTimeout(() => {
+                // Create WhatsApp message with details
+                const message = `*New Enquiry - OneHubCentre*%0A%0A` +
+                               `*Name:* ${name}%0A` +
+                               `*Email:* ${email}%0A` +
+                               `*Phone:* ${phone}%0A` +
+                               `*City:* ${city}%0A` +
+                               `*Service Required:* ${service}%0A` +
+                               `*Preferred Time:* ${preferredTime}%0A` +
+                               `*Description:* ${description || 'Not provided'}%0A%0A` +
+                               `Please contact this lead asap.`;
+                
+                // Show success modal
+                document.getElementById('enquiryModal').classList.remove('hidden');
+                
+                // Reset form
+                document.getElementById('leadEnquiryForm').reset();
+                
+                // Restore button
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+                
+                // Optional: Open WhatsApp in background to notify admin (uncomment in production)
+                // window.open(`https://wa.me/+919986848223?text=${message}`, '_blank');
+                
+            }, 1500);
+        }
+
+        function closeEnquiryModal() {
+            document.getElementById('enquiryModal').classList.add('hidden');
+        }
+
         async function processPayment() {
             const gst = Math.round(currentAmount * 0.18);
             const total = currentAmount + gst;
@@ -1807,7 +2097,7 @@
                 */
                 
                 // For demo purposes, showing the flow
-                alert(`In production, this will redirect to Cashfree Payment Page\n\nService: ${currentService}\nAmount: ₹${total}\n(Includes 18% GST)\n\nNote: You need to implement a backend API to create orders securely using your Secret Key.`);
+                alert(`In production, this will redirect to Cashfree Payment Page\\n\\nService: ${currentService}\\nAmount: ₹${total}\\n(Includes 18% GST)\\n\\nNote: You need to implement a backend API to create orders securely using your Secret Key.`);
                 
                 closePaymentModal();
                 
@@ -1861,13 +2151,13 @@
             
             let cartDetails = cart.map((item, idx) => 
                 `${idx + 1}. ${item.service} - ₹${item.amount.toLocaleString()}`
-            ).join('\n');
+            ).join('\\n');
             
             const total = cart.reduce((sum, item) => sum + item.amount, 0);
             const gst = Math.round(total * 0.18);
             const grandTotal = total + gst;
             
-            if (confirm(`Your Cart:\n\n${cartDetails}\n\nSubtotal: ₹${total.toLocaleString()}\nGST (18%): ₹${gst.toLocaleString()}\nGrand Total: ₹${grandTotal.toLocaleString()}\n\nProceed to checkout?`)) {
+            if (confirm(`Your Cart:\\n\\n${cartDetails}\\n\\nSubtotal: ₹${total.toLocaleString()}\\nGST (18%): ₹${gst.toLocaleString()}\\nGrand Total: ₹${grandTotal.toLocaleString()}\\n\\nProceed to checkout?`)) {
                 // Process cart payment
                 initiatePayment('Multiple Services', total);
             }
@@ -1986,6 +2276,12 @@
         document.getElementById('paymentModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closePaymentModal();
+            }
+        });
+
+        document.getElementById('enquiryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeEnquiryModal();
             }
         });
     </script>
